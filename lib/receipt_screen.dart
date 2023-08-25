@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ReceiptScreen extends StatefulWidget {
@@ -16,12 +17,30 @@ class _ReceiptScreenState extends State<ReceiptScreen> {
       child: Stack(
         alignment: Alignment.center,
         children: [
+          Positioned(
+            top: 0,
+            child: RotatedBox(
+              quarterTurns: 2,
+              child: Image.asset("assets/images/confetti.png",scale: 2.0),
+            ),
+          ),
+          // const Positioned(
+          //   top: 50.0,
+          //   child: Text(
+          //     "Top up Receipt",
+          //     style: TextStyle(
+          //       fontSize: 16.0,
+          //         color: Colors.white,
+          //         decoration: TextDecoration.none),
+          //   ),
+          // ),
           Column(
             children: [
              const SizedBox(height: 16.0 * 5),
               Container(
                 margin: const EdgeInsets.only(top:16.0,left: 16.0,right: 16.0,bottom: 0.0),
                 height: MediaQuery.of(context).size.height*0.4,
+                width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                     color: Colors.white,
                   border: Border.all(color: Colors.white),
